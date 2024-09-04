@@ -35,7 +35,7 @@ find_package(glfw3 CONFIG REQUIRED)
 find_package(Vulkan REQUIRED)
 
 add_executable(main main.cpp)
-target_compile_definitions(main PRIVATE NOMINMAX=1)
+target_compile_definitions(main PRIVATE NOMINMAX=1 VK_USE_PLATFORM_WIN32_KHR)
 target_compile_features(main PRIVATE cxx_std_23)
 target_link_libraries(
     main
